@@ -134,4 +134,4 @@ const typesNames = Object.keys(typesAliases)
 
 const getTypePluralNameByTypeUri = uri => types[uri] ? `${types[uri]}s` : null
 
-module.exports = { types, typesNames, getTypePluralNameByTypeUri }
+module.exports = { types, typesNames, typesAliases, getTypePluralNameByTypeUri }
