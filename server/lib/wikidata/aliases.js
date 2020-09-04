@@ -118,6 +118,10 @@ const typesAliases = module.exports = {
   ]
 }
 
+const depreciatedAliases = [
+  'wd:Q571' // book
+]
+
 const types = {}
 
 for (let type in typesAliases) {
@@ -134,4 +138,4 @@ const typesNames = Object.keys(typesAliases)
 
 const getTypePluralNameByTypeUri = uri => types[uri] ? `${types[uri]}s` : null
 
-module.exports = { types, typesNames, typesAliases, getTypePluralNameByTypeUri }
+module.exports = { types, typesNames, typesAliases, getTypePluralNameByTypeUri, depreciatedAliases }
