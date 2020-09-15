@@ -46,12 +46,10 @@ module.exports = {
     return db.postAndReturn(patch)
   },
 
-  getSnapshots: entityId => {
-    return byEntityId(entityId)
-    .then(patchDocs => {
-      const base = Entity.create()
-      return Patch.getSnapshots(base, patchDocs)
-    })
+  getSnapshots: async entityId => {
+    const patchDocs = await byEntityId(entityId)
+    const base = Entity.create()
+    return Patch.getSnapshots(base, patchDocs)
   },
 
   getGlobalActivity: async () => {

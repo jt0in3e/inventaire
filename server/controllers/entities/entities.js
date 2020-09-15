@@ -10,15 +10,15 @@ module.exports = {
       'author-works': require('./author_works'),
       'serie-parts': require('./serie_parts'),
       images: require('./images'),
-      popularity: require('./popularity')
+      popularity: require('./popularity'),
+      history: require('./history')
     },
     dataadmin: {
       duplicates: require('./duplicates')
     },
     admin: {
       activity: require('./activity'),
-      contributions: require('./contributions'),
-      history: require('./history')
+      contributions: require('./contributions')
     }
   }),
 
