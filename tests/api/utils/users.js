@@ -13,6 +13,10 @@ module.exports = {
     return users
   },
 
+  updateUser: (user, attribute, value) => {
+    return customAuthReq(user, 'put', '/api/user', { attribute, value })
+  },
+
   deleteUser: user => customAuthReq(user, 'delete', '/api/user')
 }
 
